@@ -21,5 +21,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// as it needed again-2 in every api we keep it in centeral place to access any where rather then writing again and again
+// as it needed again-2 in every api we keep it in centeral place to access anywhere rather then writing again and again
 export const auth = getAuth();

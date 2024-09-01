@@ -7,21 +7,14 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addUser} from "../utils/userSlice";
-
+import { addUser } from "../utils/userSlice";
+import { BG_IMG, USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
   const dispatch = useDispatch();
-
-  const toggleSignInForm = () => {
-    setIsSignInForm(!isSignInForm);
-  };
-
-  const navigate = useNavigate();
 
   const name = useRef(null);
   const email = useRef(null);
@@ -53,11 +46,11 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/103417842?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
-              const { uid, email, displayName, photoURL } = auth.currentUser;  // update user auth.currentUser
+              const { uid, email, displayName, photoURL } = auth.currentUser; // update user auth.currentUser
               dispatch(
                 addUser({
                   uid: uid,
@@ -66,7 +59,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -89,8 +81,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          // console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -100,15 +90,15 @@ const Login = () => {
     }
   };
 
+  const toggleSignInForm = () => {
+    setIsSignInForm(!isSignInForm);
+  };
+
   return (
     <div>
       <Header />
       <div className="absolute w-screen">
-        <img
-          className="w-screen h-screen"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/b2c3e95b-b7b5-4bb7-a883-f4bfc7472fb7/19fc1a4c-82db-4481-ad08-3a1dffbb8c39/IN-en-20240805-POP_SIGNUP_TWO_WEEKS-perspective_WEB_24a485f6-1820-42be-9b60-1b066f1eb869_small.jpg"
-          alt="backgound"
-        />
+        <img className="w-screen h-screen" src={BG_IMG} alt="backgound" />
       </div>
 
       <form

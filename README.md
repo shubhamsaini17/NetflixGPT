@@ -44,3 +44,32 @@ LIVE LINK:- https://resilient-mandazi-c8da85.netlify.app/
 - NetflixGPT
     -Search Bar
     - Movie Suggestions
+
+
+
+Sign In 
+
+![Screenshot (71)](https://github.com/user-attachments/assets/6b1d91dd-a7ad-4f06-8839-e152a5be6426)
+
+Sign Up
+
+![Screenshot (72)](https://github.com/user-attachments/assets/cfcc9890-a660-4756-9885-42305e1b8dcd)
+
+Home Page
+
+![Screenshot (70)](https://github.com/user-attachments/assets/85c18430-d9c8-44fb-820e-dc49508b70d7)
+
+GPT Search Page
+
+![Screenshot (73)](https://github.com/user-attachments/assets/b832a8b2-5996-41c2-a1bf-dd2b2cf0b728)
+
+
+Multi-Language Support
+
+![Screenshot (74)](https://github.com/user-attachments/assets/478fc11a-a9eb-498c-9cac-684ca8e6208f)
+
+
+
+
+
+

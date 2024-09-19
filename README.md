@@ -46,6 +46,7 @@ LIVE LINK:- https://resilient-mandazi-c8da85.netlify.app/
     - Movie Suggestions
 
 
+Authentication using Firebase
 
 Sign In 
 
